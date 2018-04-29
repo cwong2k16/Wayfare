@@ -7,8 +7,11 @@
         <link rel="stylesheet" href="../css/bootstrap.min.css">
     </head>
     <body>
-        <div class="navbar navbar-light bg-light">
-            <a class="navbar-brand" href="#">Wayfare</a>
-        </div>
+        <?php
+            include '/partials/navbar.php';
+        ?>
+        <?php
+            include '/partials/footer.php';
+        ?>
     </body>
 </html>
