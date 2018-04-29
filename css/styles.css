@@ -1,0 +1,13 @@
+body{
+    margin:0;
+}
+
+.footer{
+    background-color: black;
+    color: white;
+}
+
+.center-elements{
+    margin: auto;
+    width: 50%;
+}

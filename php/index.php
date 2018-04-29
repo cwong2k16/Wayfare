@@ -5,6 +5,7 @@
             Travel Wayfare - Explore the world! 
         </title>
         <link rel="stylesheet" href="../css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="../css/styles.css">
     </head>
     <body>
         <?php
