@@ -5,8 +5,8 @@
                 <strong>Wayfare</strong>
             </h3>
             <hr>
-            <p>Wayfare provides you with an easy-to-use interface for purchasing flight tickets,
-               making reservations.
+            <p>Wayfare provides you with an easy-to-use interface for booking flights,
+               making reservations, and finding travel services.
             </p>
         </div>
 
@@ -44,7 +44,7 @@
                     123 Street street, City, State
                 </p>
                 <p>
-                    Email us @ outreach@wayfare.com
+                    Email us - outreach@wayfare.com
                 </p>
             </div>
         </div>
