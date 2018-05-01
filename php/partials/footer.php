@@ -17,7 +17,7 @@
             <hr>
             <div style="text-align:center">
                 <p>
-                    <a href="#">Book a Flight</a>
+                    <a href="#booking">Book a Flight</a>
                 </p>
                 <p>
                     <a href="#">Travel Services</a>

@@ -12,6 +12,10 @@
             include '/partials/navbar.php';
         ?>
         <?php
+            include '/partials/search.php';
+        ?>
+
+        <?php
             include '/partials/footer.php';
         ?>
     </body>
