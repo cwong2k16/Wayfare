@@ -6,16 +6,14 @@
         </title>
         <link rel="stylesheet" href="../css/bootstrap.min.css">
         <link rel="stylesheet" type="text/css" href="../css/styles.css">
+        <script src="../js/jquery.min.js"></script>
+        <script src="../js/script.js"></script>
     </head>
     <body>
         <?php
             include '/partials/navbar.php';
-        ?>
-        <?php
+            include '/partials/banner.php';
             include '/partials/search.php';
-        ?>
-
-        <?php
             include '/partials/footer.php';
         ?>
     </body>
