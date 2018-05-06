@@ -9,6 +9,7 @@
             include '/partials/banner.php';
             include '/partials/search.php';
             include '/partials/footer.php';
+            include '/partials/dependencies.php';
         ?>
     </body>
 </html>

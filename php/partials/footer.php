@@ -1,5 +1,5 @@
-<div class="container">
-    <div class="row mt-3 justify-content-center">
+<div class="container justify-content-center">
+    <div class="row mt-3">
         <div class="col-md-3">
             <h3 style="text-align:center">
                 <strong>Wayfare</strong>
