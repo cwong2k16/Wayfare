@@ -6,7 +6,6 @@
             <input type="radio" name="travelType" value="car"> Car </input>
             <input type="radio" name="travelType" value="cruise"> Cruise </input>
         </form>
-
         <select id = "source" class="selectpicker" placeholder="Source.." data-live-search="true">
             <option value="" disabled selected> Select your source... </option>
             <option>Boston, MA</option>
