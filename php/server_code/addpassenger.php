@@ -4,6 +4,8 @@ $forminfo = json_decode($json, true);
 $firstname = $forminfo["firstname"];
 $lastname = $forminfo["lastname"];
 $birthday = $forminfo["birthday"];
+$fpass = $forminfo["password"];
+
 
 $jsonobj->status = "error";
 
@@ -23,8 +25,8 @@ if ($conn->connect_error) {
 }
 
 // sql to create table
-$sql_attributes = "INSERT INTO passenger (first_name, last_name, birthday"; // need to append trailing ')' at end
-$sql_values = "VALUES ('".$firstname."', '".$lastname."', FROM_UNIXTIME(".$birthday.")"; // need to append trailing ')' at end
+$sql_attributes = "INSERT INTO passenger (first_name, last_name, birthday, password"; // need to append trailing ')' at end
+$sql_values = "VALUES ('".$firstname."', '".$lastname."', FROM_UNIXTIME(".$birthday."), '".$fpass."'"; // need to append trailing ')' at end
 
 if (array_key_exists("gender", $forminfo)) {
 	$gender = $forminfo["gender"];
