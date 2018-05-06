@@ -9,7 +9,6 @@
                making reservations, and finding travel services.
             </p>
         </div>
-
         <div class="col-md-3">
             <h3 style="text-align:center">
                 <strong>Links</strong>
@@ -17,10 +16,10 @@
             <hr>
             <div style="text-align:center">
                 <p>
-                    <a href="#booking">Book a Flight</a>
+                    <a href="http://localhost/wayfare/php/index.php#booking">Book a Flight</a>
                 </p>
                 <p>
-                    <a href="#">Travel Services</a>
+                    <a href>Travel Services</a>
                 </p>
                 <p>
                     <a href="#">Careers</a>

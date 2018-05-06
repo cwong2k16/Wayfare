@@ -1,4 +1,4 @@
-<div style="text-align:center">
+<div id = "booking" style="text-align:center">
     <div>
         <input placeholder = "Source..." class="search-bar"></input>
     </div>

@@ -6,8 +6,7 @@
     <body>
         <?php
             include '/partials/navbar.php';
-            include '/partials/banner.php';
-            include '/partials/search.php';
+            include '/partials/loginForm.php';
             include '/partials/footer.php';
         ?>
     </body>
