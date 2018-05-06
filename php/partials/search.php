@@ -1,5 +1,6 @@
 <div id = "booking" style="text-align:center">
     <div style="padding:5px">
+  <span class="glyphicon glyphicon-search"></span>
         <select id = "source" class="selectpicker" placeholder="Source.." data-live-search="true">
             <option value="" disabled selected> Select your source... </option>
             <option>Boston, MA</option>
