@@ -120,7 +120,7 @@ function displayAccomodations(){
         xhr.send(data);
 }
 
-function displayAccomodations(){
+function displayTravelPrice(){
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "../php/server_code/travelprice.php", true);
         xhr.setRequestHeader("Content-type", "application/json");
