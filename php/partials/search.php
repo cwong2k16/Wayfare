@@ -33,6 +33,5 @@
             Search
     </button>
     <div id="displayAccomodations">
-       
     </div>
 </form>
