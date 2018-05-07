@@ -34,7 +34,7 @@ function signUp() {
     var s = document.getElementById("state");
     var state = s.options[s.selectedIndex].value;
 
-    var data = JSON.stringify({"firstname": firstName, "lastname": lastName,  "email": email,
+    var data = JSON.stringify({"first_name": firstName, "last_name": lastName,  "email": email,
                                "zip_code":zipcode, "street_address": address, "password":password, "password2":password2,
                                "birthday": birthdate, "gender":gender, "state":state});
     console.log(data);
