@@ -1,11 +1,20 @@
 <?php
+
+// function debug_to_console( $data ) {
+//         $output = $data;
+//         if ( is_array( $output ) )
+//                 $output = implode( ',', $output);
+
+//         echo "<script>console.log( 'Debug Objects: " . $output . "' );</script>";
+//         }
+// debug_to_console("Help");
+
 $json = file_get_contents('php://input');
 $forminfo = json_decode($json, true);
-$firstname = $forminfo["firstname"];
-$lastname = $forminfo["lastname"];
+$firstname = $forminfo["first_name"];
+$lastname = $forminfo["last_name"];
 $birthday = $forminfo["birthday"];
 $fpass = $forminfo["password"];
-
 
 $jsonobj->status = "error";
 
@@ -41,7 +50,7 @@ if (array_key_exists("gender", $forminfo)) {
 	$sql_values .= ", '".$gender."'";
 }
 
-if (array_key_exists("address", $forminfo)) {
+if (array_key_exists("street_address", $forminfo)) {
 	$address = $forminfo["address"];
         $sql_attributes .= ", street_address"; // append to end of sql_attributes
         $sql_values .= ", '".$address."'";
@@ -59,12 +68,11 @@ if (array_key_exists("state", $forminfo)) {
         $sql_values .= ", '".$state."'";
 }
 
-if (array_key_exists("zipcode", $forminfo)) {
-	$zipcode = $forminfo["zipcode"];
+if (array_key_exists("zip_code", $forminfo)) {
+	$zipcode = $forminfo["zip_code"];
         $sql_attributes .= ", zip_code"; // append to end of sql_attributes
         $sql_values .= ", '".$zipcode."'";
 }
-
 $sql = $sql_attributes . ") " . $sql_values . ")";
 echo $sql;
 if ($conn->query($sql) === TRUE) {
@@ -78,4 +86,3 @@ echo $re;
 
 $conn->close();
 ?>
-

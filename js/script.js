@@ -4,19 +4,20 @@ $(document).ready(function(){
 
 /* Registration related (addpassenger.php stuff) */
 function signUp() {
-    console.log(getValue('firstName'));
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "../php/server_code/addpassenger.php", true);
+    xhr.open("POST", "130.245.171.91/php/server_code/addpassenger.php", true);
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                     var json = JSON.parse(xhr.responseText);
-                    console.log(json);
                     if (json.status == OK) {
                             alert("success");
                     } else {
                             alert("failure");
                     }
+            }
+            else{
+                console.log("error " + xhr.status);
             }
     }
     var firstName = getValue('firstName');
@@ -34,7 +35,7 @@ function signUp() {
     var state = s.options[s.selectedIndex].value;
 
     var data = JSON.stringify({"firstname": firstName, "lastname": lastName,  "email": email,
-                               "zipcode":zipcode, "address": address, "password":password, "password2":password2,
+                               "zip_code":zipcode, "street_address": address, "password":password, "password2":password2,
                                "birthday": birthdate, "gender":gender, "state":state});
     console.log(data);
     xhr.send(data);
@@ -50,7 +51,7 @@ function toUnix(birthdate){
 /* After pressing search (traveloptions.js stuff starts here) */
 function displayTravelOptions(){
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "../php/server_code/traveloptions.php", true);
+    xhr.open("POST", "130.245.171.91/php/server_code/traveloptions.php", true);
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
@@ -68,7 +69,7 @@ function displayTravelOptions(){
     var d = document.getElementById("destination");
     var destination = d.options[d.selectedIndex].value;
     var travOps = document.querySelector('input[name = "travelType"]:checked').value;
-    var data = JSON.stringify({"source": source, "destination": destination, "option":travOps});
+    var data = JSON.stringify({"source": source, "dest": destination, "option":travOps});
     console.log(data);
     xhr.send(data);
 }
