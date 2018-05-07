@@ -6,6 +6,7 @@
         <link rel="stylesheet" type="text/css" href="../css/styles.css">
         <script src="../js/jquery.min.js"></script>
         <script src="../js/script.js"></script>
+        <script src="../js/moment.js"></script>
         <!-- <link href="../css/bootstrap.min.css" rel="stylesheet"/> -->
         <link rel="stylesheet" href="../css/bootstrap-select.min.css" />
         <link rel="stylesheet" href="../css/bootstrap-datepicker3.css"/>

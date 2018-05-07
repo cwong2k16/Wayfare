@@ -1,13 +1,13 @@
 <div class="center-elements">
-    <form method="signUp()">
+    <form onsubmit="signUp()">
         <div class="form-group">
             <h3 class="form-signup-heading">Please register for an account</h3>
         </div>
         <div class="form-group">
-            <input id="firstName" class="form-control" placeholder="First Name" required type="password">
+            <input id="firstName" class="form-control" placeholder="First Name" required>
         </div>
         <div class="form-group">
-            <input id="lastName" class="form-control" placeholder="Last Name" required type="password">
+            <input id="lastName" class="form-control" placeholder="Last Name" required>
         </div>
         <div class="form-group">
             <select id = "gender" class="selectpicker" placeholder="Enter gender" data-live-search="true">
@@ -24,7 +24,7 @@
             <input id="email" class="form-control" placeholder="Email address" required type="email">
         </div>
         <div class="form-group">
-            <input id="street" class="form-control" placeholder="Street address" required type="email">
+            <input id="street" class="form-control" placeholder="Street address" required>
         </div>
         <div class="form-group">
             <select id = "state" class="selectpicker" placeholder="State.." data-live-search="true">
@@ -37,7 +37,7 @@
             </select>
         </div>
         <div class="form-group">
-            <input id="zipcode" class="form-control" placeholder="Zipcode" required type="email">
+            <input id="zipcode" class="form-control" placeholder="Zipcode" required>
         </div>
         <div class="form-group">
             <input id="password" class="form-control" placeholder="Password" required type="password">

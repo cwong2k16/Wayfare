@@ -3,6 +3,7 @@ $(document).ready(function(){
 });
 
 function signUp() {
+    console.log(getValue('firstName'));
     var xhr = new XMLHttpRequest();
     xhr.open("POST", "./php/server_code/addpassenger.php", true);
     xhr.setRequestHeader("Content-type", "application/json");
@@ -21,23 +22,29 @@ function signUp() {
     var lastName = getValue('lastName');
     var email = getValue('email');
     var zipcode = getValue('zipcode');
-    var street = getValue('street');
+    var address = getValue('street');
     var password = getValue('password');
     var password2 = getValue('password2');
     var birthdate = getValue('birthdate');
     birthdate = toUnix(birthdate);
+    var g = document.getElementById("gender");
+    var gender = g.options[g.selectedIndex].value;
+    var s = document.getElementById("state");
+    var state = s.options[s.selectedIndex].value;
 
     var data = JSON.stringify({"firstName": firstName, "lastName": lastName,  "email": email,
-                               "zipcode":zipcode, "street": street, "password":password, "password2":password2,
-                               "birthdate": birthdate});
+                               "zipcode":zipcode, "address": address, "password":password, "password2":password2,
+                               "birthdate": birthdate, "gender":gender, "state":state});
+    console.log(data);
     xhr.send(data);
 }
 
 function getValue(attr){
-    return document.getElementById(attr).value();
+    return document.getElementById(attr).value;
 }
 
 function toUnix(birthdate){
-    var array = birthdate.split("/");
-    
+    var bd = birthdate + " 12:00";
+    var ts = moment(bd, "MM/DD/YYYY HH:mm").valueOf();
+    return ts;
 }
