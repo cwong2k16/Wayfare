@@ -97,10 +97,10 @@ function displayAccomodations(){
                 if (xhr.readyState === 4 && xhr.status === 200) {
                         var json = JSON.parse(xhr.responseText);
                         console.log(json);
-                        if (json.status == OK) {
-                                alert("success");
+                        if (json.status == "OK") {
+                                
                         } else {
-                                alert("failure");
+                                
                         }
                 }
         }

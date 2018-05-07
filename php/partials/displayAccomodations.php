@@ -10,12 +10,6 @@
 <div class="center-elements">
     <form onsubmit="displayAccomodations()">
         <div class="form-group">
-            <select id = "acc_group" class="selectpicker" data-live-search="true">
-                <option value="" disabled selected> Group # (in email receipt) </option>
-                <option value="300001">300001</option>
-                <option value="300002">300002</option>
-            </select>
-
             <select id = "acc_loc" class="selectpicker" data-live-search="true">
                 <option value="" disabled selected> Destination </option>
                 <option value="200007">Boston, MA</option>
@@ -28,7 +22,7 @@
             </select>
         </div>
         <div class="form-group">
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Find</button>
+            <button class="btn btn-lg btn-primary btn-block" type = "button" onclick = "displayTravelOptions()">Find</button>
         </div>
     </form>
 </div>
