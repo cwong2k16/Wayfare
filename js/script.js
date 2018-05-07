@@ -97,15 +97,22 @@ function displayAccomodations(){
                 if (xhr.readyState === 4 && xhr.status === 200) {
                         var json = JSON.parse(xhr.responseText);
                         console.log(json);
+			var dejson = "";
+			for(var i = 0; i < json.items.length; i++){
+				for(var key in json.items[i]){
+					dejson += '<div>' + key.toUpperCase() + ": <strong>" + json.items[i][key] + '</strong></div>';
+				}
+				dejson += "<br/>";
+			}
                         if (json.status == "OK") {
-                           document.getElementById('display_accomo').innerHTML = json;
+                           document.getElementById('display_accomo').innerHTML = dejson;
                         } else {
                            document.getElementById('display_accomo').innerHTML = "Query not found in database";
                         }
                 }
         }
         var s = document.getElementById("acc_loc");
-        var location = s.options[s.selectedIndex].name;
+        var location = s.options[s.selectedIndex].value;
         var data = JSON.stringify({"location":location});
         console.log(data);
         xhr.send(data);
