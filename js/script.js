@@ -5,7 +5,7 @@ $(document).ready(function(){
 function signUp() {
     console.log(getValue('firstName'));
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "./php/server_code/addpassenger.php", true);
+    xhr.open("POST", "../php/server_code/addpassenger.php", true);
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
@@ -32,9 +32,9 @@ function signUp() {
     var s = document.getElementById("state");
     var state = s.options[s.selectedIndex].value;
 
-    var data = JSON.stringify({"firstName": firstName, "lastName": lastName,  "email": email,
+    var data = JSON.stringify({"firstname": firstName, "lastname": lastName,  "email": email,
                                "zipcode":zipcode, "address": address, "password":password, "password2":password2,
-                               "birthdate": birthdate, "gender":gender, "state":state});
+                               "birthday": birthdate, "gender":gender, "state":state});
     console.log(data);
     xhr.send(data);
 }
