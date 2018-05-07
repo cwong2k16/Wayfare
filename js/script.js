@@ -5,15 +5,15 @@ $(document).ready(function(){
 /* Registration related (addpassenger.php stuff) */
 function signUp() {
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "../php/server_code/addpassenger.php", true);
+    xhr.open("POST", "./server_code/addpassenger.php", true);
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                     var json = JSON.parse(xhr.responseText);
-                    if (json.status == OK) {
-                            alert("success");
+                    if (json.status == "OK") {
+                            console.log("great");
                     } else {
-                            alert("failure");
+                            alert("Status failed.");
                     }
             }
             else{
@@ -55,20 +55,27 @@ function displayTravelOptions(){
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
-                    var json = JSON.parse(xhr.responseText);
-		    console.log(json);
-                    console.log(json.items[0]);
-                    var append = "";
-                    for(var key in json.items[0]){
-                        append += key + ": " + json.items[0][key] + "\n";
-                    }
-                    document.getElementById("displayAccomodations").innerHTML = append;
-                    if (json.status == OK) {
-                            alert("success");
-                    } else {
-                            alert("failure");
-                    }
-            }
+                var json = JSON.parse(xhr.responseText);
+                var opt = document.querySelector('input[name = "travelType"]:checked').value;
+                var append = "";
+		for(var i = 0; i < json.items.length; i++){
+			if(json.items[i]['type'] === opt){
+               	           for(var key in json.items[i]){
+                   	        append += "<div>"+ key + ": "+  + json.items[i][key] + "</div>";
+			   }
+		         }
+		}
+                if (json.status == "OK") {
+		    if(append.length === 0){
+			document.getElementById("displayAccomodations").innerHTML = "Nothing came up in the query.";
+		    }
+		    else{
+                        document.getElementById("displayAccomodations").innerHTML = append;
+		   }
+                } else {
+                    document.getElementById("displayAccomodations").innerHTML = "Nothing came up in the query.";
+                }
+	}
     }
     var s = document.getElementById("source");
     var source = s.options[s.selectedIndex].value;
@@ -76,7 +83,6 @@ function displayTravelOptions(){
     var destination = d.options[d.selectedIndex].value;
     var travOps = document.querySelector('input[name = "travelType"]:checked').value;
     var data = JSON.stringify({"source": source, "dest": destination, "option":travOps});
-    console.log('aaa: ' + data);
     xhr.send(data);
 }
 /* traveloptions.js stuff ends here */

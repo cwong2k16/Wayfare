@@ -1,5 +1,5 @@
 
-<form onsubmit = "displayTravelOptions()" id = "booking" style="text-align:center">
+<form onsubmit = "displayTravelOptions()" action = "" id = "booking" style="text-align:center">
     <div style="padding:5px">
         <div id = "travelTypes" style = "padding-bottom: 15px">
             <input type="radio" name="travelType" value="flight"> Flight </input>
@@ -29,10 +29,10 @@
         </select>
     </div>
     <!-- Date picker for source and destination-->
-    <button class = "find-flight-btn" type = "submit">
+    <button class = "find-flight-btn" type = "button" onclick = "displayTravelOptions()">
             Search
     </button>
     <div id="displayAccomodations">
-        
+       
     </div>
 </form>
