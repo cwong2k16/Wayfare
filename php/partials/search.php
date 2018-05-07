@@ -9,23 +9,23 @@
         </div>
         <select id = "source" class="selectpicker" placeholder="Source.." data-live-search="true">
             <option value="" disabled selected> Select your source... </option>
-            <option>Boston, MA</option>
-            <option>Dallas, TX</option>
-            <option>Los Angeles, CA</option>
-            <option>Newark, NJ</option>
-            <option>Orlando, FL</option>
-            <option>Queens, NY</option>
-            <option>Stony Brook, NY</option>
+            <option name="200007">Boston, MA</option>
+            <option name="200006">Dallas, TX</option>
+            <option name="200004">Los Angeles, CA</option>
+            <option name="200005">Newark, NJ</option>
+            <option name="200003">Orlando, FL</option>
+            <option name="200001">Queens, NY</option>
+            <option name="200002">Stony Brook, NY</option>
         </select>
         <select id = "destination" class="selectpicker" placeholder="Destination.." data-live-search="true">
             <option value="" disabled selected> Select your destination... </option>
-            <option>Boston, MA</option>
-            <option>Dallas, TX</option>
-            <option>Los Angeles, CA</option>
-            <option>Newark, NJ</option>
-            <option>Orlando, FL</option>
-            <option>Queens, NY</option>
-            <option>Stony Brook, NY</option>
+            <option name="200007">Boston, MA</option>
+            <option name="200006">Dallas, TX</option>
+            <option name="200004">Los Angeles, CA</option>
+            <option name="200005">Newark, NJ</option>
+            <option name="200003">Orlando, FL</option>
+            <option name="200001">Queens, NY</option>
+            <option name="200002">Stony Brook, NY</option>
         </select>
     </div>
     <!-- Date picker for source and destination-->
