@@ -119,6 +119,27 @@ function displayAccomodations(){
         console.log(data);
         xhr.send(data);
 }
+
+function displayAccomodations(){
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "../php/server_code/travelprice.php", true);
+        xhr.setRequestHeader("Content-type", "application/json");
+        xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                        var json = JSON.parse(xhr.responseText);
+			
+                        if (json.status == "OK") {
+                           document.getElementById('display_accomo').innerHTML = json;
+                        } else {
+                           document.getElementById('display_accomo').innerHTML = "Query not found in database";
+                        }
+                }
+        }
+        var trans_id = getValue("trans_id");
+        var group_id = getValue("group_id");
+        xhr.send(data);
+}
+
 /* end accomodation.js here */
 
 /* Display travel prices (travelprice.php) */

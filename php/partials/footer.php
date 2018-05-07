@@ -19,7 +19,7 @@
                     <a href="http://130.245.171.91/php/index.php#booking">Book a Flight</a>
                 </p>
                 <p>
-                    <a href>Travel Services</a>
+                    <a href="http://130.245.171.91/php/prices.php">Prices</a>
                 </p>
                 <p>
                     <a href="http://130.245.171.91/php/accomodations.php">Accomodations</a>
