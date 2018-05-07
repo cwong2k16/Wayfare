@@ -30,6 +30,13 @@ $sql_values = "VALUES ('".$firstname."', '".$lastname."', FROM_UNIXTIME(".$birth
 
 if (array_key_exists("gender", $forminfo)) {
 	$gender = $forminfo["gender"];
+	if (strcmp($gender, "Male") == 0) {
+		$gender = "m";
+	} elseif (strcmp($gender, "Female") == 0) {
+                $gender = "f";
+        } else {
+                $gender = "o";
+        }
 	$sql_attributes .= ", gender"; // append to end of sql_attributes
 	$sql_values .= ", '".$gender."'";
 }
