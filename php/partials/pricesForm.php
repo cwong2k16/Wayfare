@@ -10,10 +10,10 @@
 <div class="center-elements">
     <form onsubmit="displayTravelPrice()">
         <div class="form-group">
-            <input id="trans_id" class="form-control" placeholder="Password" required type="password">
+            <input id="trans_id" class="form-control" placeholder="Password" required>
         </div>
         <div class="form-group">
-            <input id="group_id" class="form-control" placeholder="Password" required type="password">
+            <input id="group_id" class="form-control" placeholder="Password" required>
         </div>
         <div class="form-group">
             <button class="btn btn-lg btn-primary btn-block" type = "button" onclick = "displayTravelPrice()">Find</button>
