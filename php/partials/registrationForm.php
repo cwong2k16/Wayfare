@@ -1,7 +1,7 @@
 <div class="center-elements">
     <form onsubmit="signUp()">
         <div class="form-group">
-            <h3 class="form-signup-heading">Please register for an account</h3>
+            <h3 class="form-signup-heading">Please regisssster for an account</h3>
         </div>
         <div class="form-group">
             <input id="firstName" class="form-control" placeholder="First Name" required>
