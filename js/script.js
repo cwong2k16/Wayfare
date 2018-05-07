@@ -51,12 +51,13 @@ function toUnix(birthdate){
 /* After pressing search (traveloptions.js stuff starts here) */
 function displayTravelOptions(){
     var xhr = new XMLHttpRequest();
-    xhr.open("POST", "../php/server_code/traveloptions.php", true);
+    xhr.open("POST", "./server_code/traveloptions.php", true);
     xhr.setRequestHeader("Content-type", "application/json");
     xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                     var json = JSON.parse(xhr.responseText);
-                    console.log(json);
+		    console.log(json);
+		    console.log(json.items[0].id);
                     if (json.status == OK) {
                             alert("success");
                     } else {

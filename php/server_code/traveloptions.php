@@ -8,6 +8,9 @@ $servername = "localhost";
 $username = "root";
 $password = "password";
 
+//error_log(print_r($forminfo, true));
+//error_log(print_r($_GET, true));
+
 // Change db location
 $dbname = "travel";
 
@@ -18,6 +21,7 @@ $conn = new mysqli($servername, $username, $password, $dbname);
 if ($conn->connect_error) {
         //$jsonobj->status = "ERROR";
         //die("Connection failed: " . $conn->connect_error);
+	$jsonobj->reason = "cannot connect to db";
 }
 
 // sql to create table
