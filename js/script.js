@@ -64,7 +64,8 @@ function displayTravelOptions(){
                    	        append += "<div>"+ key + ": "+  + json.items[i][key] + "</div>";
 			   }
 		         }
-		}
+                }
+                console.log("hello world");
                 if (json.status == "OK") {
 		    if(append.length === 0){
 			document.getElementById("displayAccomodations").innerHTML = "Nothing came up in the query.";
