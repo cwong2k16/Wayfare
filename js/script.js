@@ -60,7 +60,7 @@ function displayTravelOptions(){
                     console.log(json.items[0]);
                     var append = "";
                     for(var key in json.items[0]){
-                        append += key + ": " + json.items[0][key] + "/n";
+                        append += key + ": " + json.items[0][key] + "\n";
                     }
                     console.log(append);
                     if (json.status == OK) {
