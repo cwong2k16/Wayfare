@@ -22,7 +22,7 @@
             </select>
         </div>
         <div class="form-group">
-            <button class="btn btn-lg btn-primary btn-block" type = "button" onclick = "displayTravelOptions()">Find</button>
+            <button class="btn btn-lg btn-primary btn-block" type = "button" onclick = "displayAccomodations()">Find</button>
         </div>
         <div id = "display_accomo">
 
