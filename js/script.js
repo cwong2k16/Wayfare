@@ -56,7 +56,6 @@ function displayTravelOptions(){
     xhr.onreadystatechange = function() {
             if (xhr.readyState === 4 && xhr.status === 200) {
                     var json = JSON.parse(xhr.responseText);
-                    console.log(json);
                     if (json.status == OK) {
                             alert("success");
                     } else {
@@ -70,14 +69,13 @@ function displayTravelOptions(){
     var destination = d.options[d.selectedIndex].value;
     var travOps = document.querySelector('input[name = "travelType"]:checked').value;
     var data = JSON.stringify({"source": source, "dest": destination, "option":travOps});
-    console.log(data);
+    console.log('aaa: ' + data);
     xhr.send(data);
 }
 /* traveloptions.js stuff ends here */
 
 /* Display accomodations (accomodation.js stuff starts here) */
-
-function displayTravelOptions(){
+function displayAccomodations(){
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "../php/server_code/accomodation.php", true);
         xhr.setRequestHeader("Content-type", "application/json");
@@ -92,17 +90,17 @@ function displayTravelOptions(){
                         }
                 }
         }
-        var s = document.getElementById("source");
-        var source = s.options[s.selectedIndex].value;
-        var d = document.getElementById("destination");
-        var destination = d.options[d.selectedIndex].value;
-        var travOps = document.querySelector('input[name = "travelType"]:checked').value;
-        var data = JSON.stringify({"source": source, "dest": destination, "option":travOps});
+        var s = document.getElementById("loc");
+        var location = s.options[s.selectedIndex].name;
+        var data = JSON.stringify({"location":location});
         console.log(data);
         xhr.send(data);
 }
+/* end accomodation.js here */
 
-/*  */
+/* Display travel prices (travelprice.php) */
+        
+/* */
 
 /* Helper Functions */
 function getValue(attr){

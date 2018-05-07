@@ -16,10 +16,13 @@
             <hr>
             <div style="text-align:center">
                 <p>
-                    <a href="http://localhost/wayfare/php/index.php#booking">Book a Flight</a>
+                    <a href="http://130.245.171.91/php/index.php#booking">Book a Flight</a>
                 </p>
                 <p>
                     <a href>Travel Services</a>
+                </p>
+                <p>
+                    <a href="http://130.245.171.91/php/accomodations.php">Accomodations</a>
                 </p>
                 <p>
                     <a href="#">Careers</a>
