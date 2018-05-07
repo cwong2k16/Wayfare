@@ -62,7 +62,7 @@ function displayTravelOptions(){
                     for(var key in json.items[0]){
                         append += key + ": " + json.items[0][key] + "\n";
                     }
-                    console.log(append);
+                    document.getElementById("displayAccomodations").innerHTML = append;
                     if (json.status == OK) {
                             alert("success");
                     } else {
