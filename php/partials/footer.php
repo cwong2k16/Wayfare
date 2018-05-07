@@ -1,6 +1,6 @@
-<div class="container justify-content-center">
-    <div class="row mt-3">
-        <div class="col-md-3">
+<div class="container center-elements">
+    <div class="row mt-5">
+        <div class="col-md-5">
             <h3 style="text-align:center">
                 <strong>Wayfare</strong>
             </h3>

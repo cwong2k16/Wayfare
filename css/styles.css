@@ -15,6 +15,13 @@ html, body, #banner{
     width: 50%;
 }
 
+.container-center{
+    display: flex;
+    align-items: center;
+    height:100%;
+    width:100%;
+}
+
 .search-bar{
     width: 50%;
     border-radius:50px;
