@@ -2,6 +2,7 @@ $(document).ready(function(){
     $("#banner").fadeIn(1000);
 });
 
+/* Registration related (addpassenger.php stuff) */
 function signUp() {
     console.log(getValue('firstName'));
     var xhr = new XMLHttpRequest();
@@ -39,12 +40,41 @@ function signUp() {
     xhr.send(data);
 }
 
-function getValue(attr){
-    return document.getElementById(attr).value;
-}
-
 function toUnix(birthdate){
     var bd = birthdate + " 12:00";
     var ts = moment(bd, "MM/DD/YYYY HH:mm").valueOf();
     return ts;
+}
+/* addpassenger.js stuff ends here */
+
+/* After pressing search (traveloptions.js stuff starts here) */
+function displayTravelOptions(){
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "../php/server_code/traveloptions.php", true);
+    xhr.setRequestHeader("Content-type", "application/json");
+    xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                    var json = JSON.parse(xhr.responseText);
+                    console.log(json);
+                    if (json.status == OK) {
+                            alert("success");
+                    } else {
+                            alert("failure");
+                    }
+            }
+    }
+    var s = document.getElementById("source");
+    var source = s.options[s.selectedIndex].value;
+    var d = document.getElementById("destination");
+    var destination = d.options[d.selectedIndex].value;
+    var travOps = document.querySelector('input[name = "travelType"]:checked').value;
+    var data = JSON.stringify({"source": source, "destination": destination, "option":travOps});
+    console.log(data);
+    xhr.send(data);
+}
+/* */
+
+/* Helper Functions */
+function getValue(attr){
+    return document.getElementById(attr).value;
 }
