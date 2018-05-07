@@ -137,6 +137,7 @@ function displayTravelPrice(){
         }
         var trans_id = getValue("trans_id");
         var group_id = getValue("group_id");
+        var data = JSON.stringify({"transportation_id":trans_id, "group_id":group_id});
         xhr.send(data);
 }
 
