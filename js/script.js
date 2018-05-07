@@ -57,7 +57,12 @@ function displayTravelOptions(){
             if (xhr.readyState === 4 && xhr.status === 200) {
                     var json = JSON.parse(xhr.responseText);
 		    console.log(json);
-		    console.log(json.items[0].id);
+                    console.log(json.items[0]);
+                    var append = "";
+                    for(var key in json.items[0]){
+                        append += key + ": " + json.items[0][key] + "/n";
+                    }
+                    console.log(append);
                     if (json.status == OK) {
                             alert("success");
                     } else {
