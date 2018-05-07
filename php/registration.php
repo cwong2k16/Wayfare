@@ -7,6 +7,7 @@
         <?php
             include './partials/navbar.php';
             include './partials/registrationForm.php';
+	    include './partials/dependencies.php';
             include './partials/footer.php';
         ?>
     </body>
