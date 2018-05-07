@@ -24,5 +24,8 @@
         <div class="form-group">
             <button class="btn btn-lg btn-primary btn-block" type = "button" onclick = "displayTravelOptions()">Find</button>
         </div>
+        <div id = "display_accomo">
+
+        </div>
     </form>
 </div>

@@ -98,13 +98,13 @@ function displayAccomodations(){
                         var json = JSON.parse(xhr.responseText);
                         console.log(json);
                         if (json.status == "OK") {
-                                
+                           document.getElementById('display_accomo').innerHTML = json;
                         } else {
-                                
+                           document.getElementById('display_accomo').innerHTML = "Query not found in database";
                         }
                 }
         }
-        var s = document.getElementById("loc");
+        var s = document.getElementById("acc_loc");
         var location = s.options[s.selectedIndex].name;
         var data = JSON.stringify({"location":location});
         console.log(data);
