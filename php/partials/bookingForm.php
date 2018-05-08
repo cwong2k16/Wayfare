@@ -1,4 +1,4 @@
-<div class="center-elements">
+<div id = "b_entire" class="center-elements">
     <form onsubmit="book()">
         <div class="form-group">
             <input id="groupid_b" class="form-control" placeholder="Group ID (email receipt)" required>

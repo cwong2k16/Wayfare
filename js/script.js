@@ -165,7 +165,7 @@ function book(){
 			}
                         if (json.status == "OK") {
                         //    document.getElementById('display_price').innerHTML = dejson;
-                        document.getElementById('book_status').innerHTML = "Submitted!";
+                           document.getElementById('b_entire').innerHTML = "<div style='text-align:center'> <strong> <h1 style='color:green'>Submitted!</h1> </strong> </div>";
                         } else {
                            document.getElementById('book_status').innerHTML = "Error!";
                         }
