@@ -135,9 +135,9 @@ function displayTravelPrice(){
 				dejson += "<br/>";
 			}
                         if (json.status == "OK") {
-                           document.getElementById('travel_price').innerHTML = dejson;
+                           document.getElementById('display_price').innerHTML = dejson;
                         } else {
-                           document.getElementById('travel_price').innerHTML = "Query not found in database";
+                           document.getElementById('display_price').innerHTML = "Query not found in database";
                         }
                 }
         }
