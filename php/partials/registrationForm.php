@@ -40,6 +40,9 @@
             <input id="zipcode" class="form-control" placeholder="Zipcode" required>
         </div>
         <div class="form-group">
+            <input id="city" class="form-control" placeholder="City" required>
+        </div>
+        <div class="form-group">
             <input id="password" class="form-control" placeholder="Password" required type="password">
         </div>
         <div class="form-group">

@@ -24,6 +24,7 @@ function signUp() {
     var lastName = getValue('lastName');
     var email = getValue('email');
     var zipcode = getValue('zipcode');
+    var city = getValue('city');
     var address = getValue('street');
     var password = getValue('password');
     var password2 = getValue('password2');
@@ -35,7 +36,7 @@ function signUp() {
     var state = s.options[s.selectedIndex].value;
 
     var data = JSON.stringify({"firstname": firstName, "lastname": lastName,  "email": email,
-                               "zipcode":zipcode, "street_address": address, "password":password, "password2":password2,
+                               "zipcode":zipcode, "city":city, "street_address": address, "password":password, "password2":password2,
                                "birthday": birthdate, "gender":gender, "state":state});
     console.log(data);
     xhr.send(data);
