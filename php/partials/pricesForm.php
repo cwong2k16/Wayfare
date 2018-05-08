@@ -18,7 +18,7 @@
         <div class="form-group">
             <button class="btn btn-lg btn-primary btn-block" type = "button" onclick = "displayTravelPrice()">Find</button>
         </div>
-        <div id = "display_accomo">
+        <div id = "display_price">
 
         </div>
     </form>

@@ -127,11 +127,17 @@ function displayTravelPrice(){
         xhr.onreadystatechange = function() {
                 if (xhr.readyState === 4 && xhr.status === 200) {
                         var json = JSON.parse(xhr.responseText);
-			
+			var dejson = "";
+			for(var i = 0; i < json.items.length; i++){
+				for(var key in json.items[i]){
+					dejson += '<div>' + key.toUpperCase() + ": <strong>" + json.items[i][key] + '</strong></div>';
+				}
+				dejson += "<br/>";
+			}
                         if (json.status == "OK") {
-                           document.getElementById('display_accomo').innerHTML = json;
+                           document.getElementById('travel_price').innerHTML = dejson;
                         } else {
-                           document.getElementById('display_accomo').innerHTML = "Query not found in database";
+                           document.getElementById('travel_price').innerHTML = "Query not found in database";
                         }
                 }
         }
