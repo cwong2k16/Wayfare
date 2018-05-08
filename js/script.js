@@ -62,7 +62,7 @@ function displayTravelOptions(){
 		for(var i = 0; i < json.items.length; i++){
 			if(json.items[i]['type'] === opt){
                	           for(var key in json.items[i]){
-                                if(key !== "type" && key !== "clas" && key !== "companyname"){
+                                if(key !== "companyid"){
                                    append += "<div>"+ key.toUpperCase() + ": <strong>" + json.items[i][key] + "</strong></div>";
                                 }
 			   }
