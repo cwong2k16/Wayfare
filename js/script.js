@@ -121,6 +121,9 @@ function displayAccomodations(){
         xhr.send(data);
 }
 
+/* end accomodation.js here */
+
+/* Display travel prices (travelprice.php) */
 function displayTravelPrice(){
         var xhr = new XMLHttpRequest();
         xhr.open("POST", "../php/server_code/travelprice.php", true);
@@ -145,11 +148,38 @@ function displayTravelPrice(){
         var data = JSON.stringify({"transportation_id":trans_id, "groupid":group_id});
         xhr.send(data);
 }
+/* */
 
-/* end accomodation.js here */
-
-/* Display travel prices (travelprice.php) */
-        
+/* Let consumer book a travel option (book.php) */ 
+function book(){
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "../php/server_code/book.php", true);
+        xhr.setRequestHeader("Content-type", "application/json");
+        xhr.onreadystatechange = function() {
+                if (xhr.readyState === 4 && xhr.status === 200) {
+                        var json = JSON.parse(xhr.responseText);
+			var dejson = "";
+			for(var key in json){
+			    dejson += key.toUpperCase() + ": <strong>" + json[key] + "</strong>"; 
+			    dejson += "<br/>";
+			}
+                        if (json.status == "OK") {
+                        //    document.getElementById('display_price').innerHTML = dejson;
+                        document.getElementById('display_price').innerHTML = "Submitted!";
+                        } else {
+                           document.getElementById('display_price').innerHTML = "Error!";
+                        }
+                }
+        }
+        var trans_id = getValue("transid_b");
+        var group_id = getValue("groupid_b");
+        var start = getValue('start_b');
+        start = toUnix(start);
+        var end = getValue('end_b');
+        end = toUnix(end);
+        var data = JSON.stringify({"transportation_id":trans_id, "groupid":group_id, "start":start, "end":end});
+        xhr.send(data);
+}
 /* */
 
 /* Helper Functions */
