@@ -128,11 +128,9 @@ function displayTravelPrice(){
                 if (xhr.readyState === 4 && xhr.status === 200) {
                         var json = JSON.parse(xhr.responseText);
 			var dejson = "";
-			for(var i = 0; i < json.items.length; i++){
-				for(var key in json.items[i]){
-					dejson += '<div>' + key.toUpperCase() + ": <strong>" + json.items[i][key] + '</strong></div>';
-				}
-				dejson += "<br/>";
+			for(var key in json){
+			    dejson += key.toUpperCase() + ": <strong>" + json[key] + "</strong>"; 
+			    dejson += "<br/>";
 			}
                         if (json.status == "OK") {
                            document.getElementById('display_price').innerHTML = dejson;

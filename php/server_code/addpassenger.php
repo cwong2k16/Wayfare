@@ -50,8 +50,8 @@ if (array_key_exists("gender", $forminfo)) {
 	$sql_values .= ", '".$gender."'";
 }
 
-if (array_key_exists("address", $forminfo)) {
-	$address = $forminfo["address"];
+if (array_key_exists("street_address", $forminfo)) {
+	$address = $forminfo["street_address"];
         $sql_attributes .= ", street_address"; // append to end of sql_attributes
         $sql_values .= ", '".$address."'";
 }
