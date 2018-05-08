@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div id= "b_entire" class="container-fluid">
     <div class="jumbotron">
         <div class="center-elements">
             <h1>Prices</h1>

@@ -27,7 +27,8 @@ if ($conn->connect_error) {
 // sql to create table
 $sql = "SELECT * FROM transport_loc INNER JOIN cruise ON 
 transportation_id=id AND source_id =".$forminfo["source"]." AND dest_id =".$forminfo["dest"]." INNER JOIN transportation ON transportation_id = transportation.id 
-INNER JOIN company ON company.id = company_id";
+INNER JOIN company ON company.id = company_id
+LEFT JOIN company_review ON company_review.company_id = company.id";
 
 $items = array();
 $result = $conn->query($sql);
@@ -41,13 +42,16 @@ if ($result->num_rows > 0) {
               $itemobj->fare = $row["fare"];
               $itemobj->companyid = $row["company_id"];
               $itemobj->companyname = $row["name"];
+	      $itemobj->review_content = $row["content"];
+	      $itemobj->rating = $row["rating"];
               $items[] = clone($itemobj);
         }
 }
 
 $sql = "SELECT * FROM transport_loc INNER JOIN bus ON
 transportation_id=id AND source_id =".$forminfo["source"]." AND dest_id =".$forminfo["dest"]." INNER JOIN transportation ON transportation_id = transportation.id
-INNER JOIN company ON company.id = company_id";
+INNER JOIN company ON company.id = company_id
+LEFT JOIN company_review ON company_review.company_id = company.id";
 
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
@@ -60,13 +64,16 @@ if ($result->num_rows > 0) {
               $itemobj->fare = $row["fare"];
               $itemobj->companyid = $row["company_id"];
               $itemobj->companyname = $row["name"];
+              $itemobj->review_content = $row["content"];
+              $itemobj->rating = $row["rating"];
               $items[] = clone($itemobj);
         }
 }
 
 $sql = "SELECT * FROM transport_loc INNER JOIN flight ON
 transportation_id=id AND source_id =".$forminfo["source"]." AND dest_id =".$forminfo["dest"]." INNER JOIN transportation ON transportation_id = transportation.id
-INNER JOIN company ON company.id = company_id";
+INNER JOIN company ON company.id = company_id
+LEFT JOIN company_review ON company_review.company_id = company.id";
 
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
@@ -79,6 +86,8 @@ if ($result->num_rows > 0) {
               $itemobj->fare = $row["fare"];
               $itemobj->companyid = $row["company_id"];
               $itemobj->companyname = $row["name"];
+              $itemobj->review_content = $row["content"];
+              $itemobj->rating = $row["rating"];
               $items[] = clone($itemobj);
         }
 }
