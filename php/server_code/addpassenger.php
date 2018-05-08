@@ -31,6 +31,8 @@ if ($conn->connect_error) {
 	$jsonobj->reason = "unable to connect to db";
 }
 
+$birthday = $birthday / 1000;
+
 // sql to create table
 $sql_attributes = "INSERT INTO passenger (first_name, last_name, birthday, password"; // need to append trailing ')' at end
 $sql_values = "VALUES ('".$firstname."', '".$lastname."', FROM_UNIXTIME(".$birthday."), '".$fpass."'"; // need to append trailing ')' at end
@@ -78,7 +80,7 @@ if (array_key_exists("email", $forminfo)) {
         $sql_values .= ", '".$email."'";
 }
 $sql = $sql_attributes . ") " . $sql_values . ")";
-echo $sql;
+//echo $sql;
 if ($conn->query($sql) === TRUE) {
         $jsonobj->status = "OK";
 } else {
