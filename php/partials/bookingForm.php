@@ -13,9 +13,6 @@
             <input class="form-control" id="end_b" name="date" placeholder="Departure Date (MM/DD/YYYY)" type="text"/>
         </div>
         <div class="form-group">
-            <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-        </div>
-        <div class="form-group">
             <button class="btn btn-lg btn-primary btn-block" type = "button" onclick = "book()">Book Now</button>
         </div>
         <div id = "book_status">

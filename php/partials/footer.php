@@ -16,7 +16,7 @@
             <hr>
             <div style="text-align:center">
                 <p>
-                    <a href="http://130.245.171.91/php/booking.php">Book a Flight</a>
+                    <a href="http://130.245.171.91/php/book.php">Book a Flight</a>
                 </p>
                 <p>
                     <a href="http://130.245.171.91/php/prices.php">Prices</a>
