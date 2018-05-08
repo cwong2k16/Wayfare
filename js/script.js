@@ -165,9 +165,9 @@ function book(){
 			}
                         if (json.status == "OK") {
                         //    document.getElementById('display_price').innerHTML = dejson;
-                        document.getElementById('display_price').innerHTML = "Submitted!";
+                        document.getElementById('book_status').innerHTML = "Submitted!";
                         } else {
-                           document.getElementById('display_price').innerHTML = "Error!";
+                           document.getElementById('book_status').innerHTML = "Error!";
                         }
                 }
         }
